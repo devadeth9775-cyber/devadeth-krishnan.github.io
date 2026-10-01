@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Devadeth Krishnan — Electrical Engineering student, technology enthusiast and mobile photographer.">
+<meta name="theme-color" content="#0b0d0c">
+<title>Devadeth Krishnan — Engineering · Technology · Photography</title>
+<style>
+:root{
+ --bg:#090b0a;--surface:#101311;--surface2:#151916;--text:#f2f4f0;
+ --muted:#9aa39d;--line:rgba(255,255,255,.09);--accent:#8ee6b3;
+ --max:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:-30%;z-index:-2;background:radial-gradient(circle at 20% 20%,rgba(80,180,120,.12),transparent 28%),radial-gradient(circle at 80% 30%,rgba(120,180,255,.08),transparent 25%);animation:drift 14s ease-in-out infinite alternate}
+body:after{content:"";position:fixed;inset:0;z-index:-1;opacity:.25;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:55px 55px;mask-image:linear-gradient(to bottom,black,transparent 85%)}
+@keyframes drift{to{transform:translate3d(2%,3%,0) scale(1.04)}}
+a{color:inherit}
+.nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(9,11,10,.72);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:var(--max);margin:auto;padding:17px 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{text-decoration:none;font-weight:800;letter-spacing:-.3px}
+.logo span{color:var(--accent)}
+.links{display:flex;gap:24px}
+.links a{text-decoration:none;color:#cdd3ce;font-size:14px;transition:.25s}
+.links a:hover{color:var(--accent)}
+.social-top{font-weight:750!important;color:#f2f4f0!important}.social-top:hover{color:var(--accent)!important}.instagram{margin-left:4px}.linkedin{margin-left:-10px}
+.hero{min-height:100vh;max-width:var(--max);margin:auto;padding:150px 24px 90px;display:flex;align-items:center}
+.hero-content{max-width:850px}
+.kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);font-weight:800;animation:rise .8s both}
+h1{font-size:clamp(54px,10vw,112px);line-height:.9;letter-spacing:-6px;margin:24px 0;background:linear-gradient(110deg,#fff 20%,#b7c2ba 55%,#7ee3a8);-webkit-background-clip:text;color:transparent;animation:rise .9s .1s both}
+.hero p{max-width:680px;color:var(--muted);font-size:19px;margin:0;animation:rise .9s .2s both}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px;animation:rise .9s .3s both}
+.btn{padding:12px 19px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-weight:750;background:rgba(255,255,255,.035);transition:transform .25s,background .25s,border .25s}
+.btn:hover{transform:translateY(-3px);border-color:rgba(142,230,179,.45)}
+.btn.primary{background:var(--accent);color:#07100b;border-color:var(--accent)}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+section{max-width:var(--max);margin:auto;padding:105px 24px;border-top:1px solid var(--line)}
+.section-head{display:flex;justify-content:space-between;gap:25px;align-items:end;margin-bottom:35px}
+.eyebrow{color:var(--accent);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+h2{font-size:clamp(32px,5vw,55px);letter-spacing:-2.5px;line-height:1;margin:9px 0 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018));border:1px solid var(--line);border-radius:24px;padding:27px;transition:transform .3s,border-color .3s,background .3s}
+.card:hover{transform:translateY(-7px);border-color:rgba(142,230,179,.3);background:linear-gradient(145deg,rgba(142,230,179,.08),rgba(255,255,255,.018))}
+.icon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:rgba(142,230,179,.1);color:var(--accent);font-weight:900;margin-bottom:24px}
+.card h3{margin:0 0 10px;font-size:20px}
+.muted{color:var(--muted)}
+.project{min-height:230px;display:flex;flex-direction:column;justify-content:space-between}
+.project .number{font-size:12px;color:#657068;letter-spacing:2px}
+.project a{color:var(--accent);text-decoration:none;font-weight:750}
+.tags{display:flex;flex-wrap:wrap;gap:9px}
+.tag{padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:#cbd2cc;background:rgba(255,255,255,.025);font-size:13px}
+.contact{position:relative;overflow:hidden}
+.contact:before{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:rgba(142,230,179,.1);filter:blur(80px);right:-100px;top:-100px}
+footer{max-width:var(--max);margin:auto;padding:35px 24px 65px;color:#68716b;font-size:13px;border-top:1px solid var(--line)}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .8s,transform .8s}.reveal.show{opacity:1;transform:none}
+@media(max-width:760px){.links{display:none}.hero{padding-top:130px}.grid{grid-template-columns:1fr}.section-head{display:block}h1{letter-spacing:-3px}.hero p{font-size:17px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav class="nav">
+ <div class="nav-inner">
+  <a class="logo" href="#home">Devadeth<span>.</span></a>
+  <div class="links"><a href="#about">About</a><a href="#work">Work</a><a href="#skills">Skills</a><a href="#contact">Contact</a><a class="social-top instagram" href="https://www.instagram.com/devadeth_krishnan/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a class="social-top linkedin" href="https://www.linkedin.com/in/devadeth-krishnan-560432434/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
+ </div>
+</nav>
+
+<main>
+<section class="hero" id="home">
+ <div class="hero-content">
+  <div class="kicker">Electrical Engineering · Technology · Photography</div>
+  <h1>Devadeth<br>Krishnan.</h1>
+  <p>I’m an Electrical Engineering student who enjoys understanding how things work, building practical ideas, and capturing interesting moments through photography.</p>
+  <div class="actions"><a class="btn primary" href="#work">Explore my work</a><a class="btn" href="#contact">Get in touch</a><a class="btn social" href="https://www.instagram.com/devadeth_krishnan/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a class="btn social" href="https://www.linkedin.com/in/devadeth-krishnan-560432434/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
+ </div>
+</section>
+
+<section id="about" class="reveal">
+ <div class="section-head"><div><div class="eyebrow">01 · About</div><h2>Curious by nature.<br>Practical by habit.</h2></div></div>
+ <div class="grid">
+  <article class="card"><div class="icon">01</div><h3>Engineering</h3><p class="muted">Focused on electrical engineering, electronics, circuit analysis and the practical side of technology.</p></article>
+  <article class="card"><div class="icon">02</div><h3>Build & Learn</h3><p class="muted">I learn by experimenting, troubleshooting and turning concepts into something I can actually test.</p></article>
+  <article class="card"><div class="icon">03</div><h3>Photography</h3><p class="muted">Mobile photography gives me a different way to notice places, details, light and everyday moments.</p></article>
+ </div>
+</section>
+
+<section id="work" class="reveal">
+ <div class="section-head"><div><div class="eyebrow">02 · Selected work</div><h2>Projects & experiments.</h2></div><p class="muted">A growing archive of things I build and learn.</p></div>
+ <div class="grid">
+  <article class="card project"><div><div class="number">PROJECT 01</div><h3>Electronics Experiments</h3><p class="muted">Hands-on experiments with circuits, components, power systems and practical electronics.</p></div><a href="#">View project →</a></article>
+  <article class="card project"><div><div class="number">PROJECT 02</div><h3>Engineering Work</h3><p class="muted">A place for electrical engineering calculations, diagrams, laboratory work and technical notes.</p></div><a href="#">View project →</a></article>
+  <article class="card project"><div><div class="number">PROJECT 03</div><h3>More coming soon</h3><p class="muted">New projects will be documented here as I build, test and learn.</p></div><a href="#contact">Stay connected →</a></article>
+ </div>
+</section>
+
+<section id="skills" class="reveal">
+ <div class="section-head"><div><div class="eyebrow">03 · Skills & interests</div><h2>What I’m exploring.</h2></div></div>
+ <div class="tags">
+  <span class="tag">Electrical Engineering</span><span class="tag">Electronics</span><span class="tag">Circuit Analysis</span><span class="tag">Problem Solving</span><span class="tag">DIY</span><span class="tag">Technology</span><span class="tag">Mobile Photography</span><span class="tag">Continuous Learning</span>
+ </div>
+</section>
+
+<section id="contact" class="contact reveal">
+ <div class="eyebrow">04 · Contact</div>
+ <h2>Let's connect.</h2>
+ <p class="muted" style="max-width:620px">For engineering, technology, project or photography conversations, feel free to reach out.</p>
+ <div class="actions">
+  <a class="btn primary" href="https://www.instagram.com/devadeth_krishnan/" target="_blank" rel="noopener noreferrer">📸 Instagram — @devadeth_krishnan ↗</a>
+  <a class="btn" href="https://www.linkedin.com/in/devadeth-krishnan-560432434/" target="_blank" rel="noopener noreferrer">💼 LinkedIn — Devadeth Krishnan ↗</a>
+ </div>
+</section>
+</main>
+
+<footer>© 2026 Devadeth Krishnan · Personal portfolio</footer>
+
+<script>
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
