@@ -58,9 +58,30 @@ footer{max-width:var(--max);margin:auto;padding:35px 24px 65px;color:#68716b;fon
 .reveal{opacity:0;transform:translateY(25px);transition:opacity .8s,transform .8s}.reveal.show{opacity:1;transform:none}
 @media(max-width:760px){.links{display:none}.hero{padding-top:130px}.grid{grid-template-columns:1fr}.section-head{display:block}h1{letter-spacing:-3px}.hero p{font-size:17px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-</style>
+.profile-photo {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto 30px;
+
+    -webkit-mask-image: radial-gradient(
+        circle,
+        black 55%,
+        transparent 78%
+    );
+    mask-image: radial-gradient(
+        circle,
+        black 55%,
+        transparent 78%
+    );
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}</style>
 </head>
 <body>
+ <img src="Picsart_26-09-14_20-19-17-953.jpg" alt="Devadeth Krishnan" class="profile-photo">
 <nav class="nav">
  <div class="nav-inner">
   <a class="logo" href="#home">Devadeth<span>.</span></a>
