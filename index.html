@@ -78,10 +78,53 @@ footer{max-width:var(--max);margin:auto;padding:35px 24px 65px;color:#68716b;fon
     );
 
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-photo {
+    width: 280px;
+    height: 330px;
+    object-fit: cover;
+    object-position: center 15%;
+    flex-shrink: 0;
+
+    -webkit-mask-image: radial-gradient(
+        ellipse,
+        black 55%,
+        transparent 82%
+    );
+
+    mask-image: radial-gradient(
+        ellipse,
+        black 55%,
+        transparent 82%
+    );
+
+    filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.35));
+}
+
+@media (max-width: 700px) {
+    .hero-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-photo {
+        width: 220px;
+        height: 260px;
+        align-self: center;
+    }
 }</style>
 </head>
 <body>
- <img src="Picsart_26-09-14_20-19-17-953.jpg" alt="Devadeth Krishnan" class="profile-photo">
 <nav class="nav">
  <div class="nav-inner">
   <a class="logo" href="#home">Devadeth<span>.</span></a>
@@ -91,12 +134,27 @@ footer{max-width:var(--max);margin:auto;padding:35px 24px 65px;color:#68716b;fon
 
 <main>
 <section class="hero" id="home">
- <div class="hero-content">
-  <div class="kicker">Electrical Engineering · Technology · Photography</div>
-  <h1>Devadeth<br>Krishnan.</h1>
-  <p>I’m an Electrical Engineering student who enjoys understanding how things work, building practical ideas, and capturing interesting moments through photography.</p>
-  <div class="actions"><a class="btn primary" href="#work">Explore my work</a><a class="btn" href="#contact">Get in touch</a><a class="btn social" href="https://www.instagram.com/devadeth_krishnan/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a class="btn social" href="https://www.linkedin.com/in/devadeth-krishnan-560432434/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
- </div>
+<div class="hero-content">
+
+    <div class="hero-text">
+        <div class="kicker">Electrical Engineering · Technology · Photography</div>
+
+        <h1>Devadeth<br>Krishnan.</h1>
+
+        <p>
+            YOUR EXISTING PARAGRAPH HERE
+        </p>
+
+        <div class="actions">
+            YOUR EXISTING BUTTONS HERE
+        </div>
+    </div>
+
+    <img src="Picsart_26-09-14_20-19-17-953.jpg"
+         alt="Devadeth Krishnan"
+         class="hero-photo">
+
+</div>
 </section>
 
 <section id="about" class="reveal">
